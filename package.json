@@ -1,0 +1,23 @@
+{
+  "name": "personal-web",
+  "version": "1.0.0",
+  "description": "Person website for Bobthe28th",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bobthe28th/personal-web.git"
+  },
+  "author": "Bobthe28th",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bobthe28th/personal-web/issues"
+  },
+  "homepage": "https://github.com/Bobthe28th/personal-web#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-handlebars": "^8.0.1"
+  }
+}

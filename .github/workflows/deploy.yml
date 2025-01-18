@@ -21,6 +21,6 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          source: "public/"
+          source: "."
           strip_components: 1
           target: "~/Websites"

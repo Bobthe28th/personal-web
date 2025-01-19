@@ -14,9 +14,6 @@ jobs:
       - name: "Install"
         run: |
           npm i
-          mkdir ../build
-          cp -TR . ../build
-          tar -cvf deploy.tar ../build/
       - name: "Push to server"
         uses: appleboy/scp-action@master
         with:
@@ -24,6 +21,6 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          source: "deploy.tar"
+          source: "."
           target: "~/Websites"
           overwrite: true

@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 80;
+const port = process.argv[2] ?? 3000;
 
 app.get('/', (req, res) => {
     res.send('Hello World! I think its goober time!!!');

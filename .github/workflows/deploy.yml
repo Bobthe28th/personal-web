@@ -24,4 +24,3 @@ jobs:
             REMOTE_PORT: ${{ secrets.SSH_PORT }}
             REMOTE_USER: ${{ secrets.SSH_USERNAME }}
             TARGET: "~/Websites/personal-web"
-            EXCLUDE: "/dist/, /node_modules/"

@@ -23,4 +23,5 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           source: "."
           target: "~/Websites"
+          timeout: 120
           overwrite: true

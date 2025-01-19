@@ -22,5 +22,5 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           source: "."
-          target: "~/Websites/personal-web/test"
+          target: "~/Websites/personal-web"
           overwrite: true

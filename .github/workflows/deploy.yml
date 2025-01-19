@@ -14,13 +14,14 @@ jobs:
       - name: "Install"
         run: |
           npm i
-      - name: "Push to server"
-        uses: appleboy/scp-action@master
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@main
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          port: ${{ secrets.SSH_PORT }}
-          source: "."
-          target: "~/Websites/personal-web"
-          overwrite: true
+            SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+            ARGS: "-rlgoDzvc -i"
+            SOURCE: "."
+            REMOTE_HOST: ${{ secrets.SSH_HOST }}
+            REMOTE_PORT: ${{ secrets.SSH_PORT }}
+            REMOTE_USER: ${{ secrets.SSH_USERNAME }}
+            TARGET: "~/Websites/personal-web"
+            EXCLUDE: "/dist/, /node_modules/"

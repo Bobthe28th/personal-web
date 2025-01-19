@@ -1,6 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+body {
+    box-sizing: border-box;
+    font-family: "Lexend", sans-serif;
+}
+
 h1 {
     font-size: 72px;
     background: -webkit-linear-gradient(#4edee8, #941c9f);
+    background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+footer p {
+    margin: 0;
 }

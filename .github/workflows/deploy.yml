@@ -14,7 +14,7 @@ jobs:
       - name: "Install"
         run: |
           npm i
-          sudo chmod 775 -R ./
+          sudo chown pi ./
       - name: "Push to server"
         uses: appleboy/scp-action@master
         with:

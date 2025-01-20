@@ -1,16 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
-body {
-    box-sizing: border-box;
-    font-family: "Lexend", sans-serif;
+:root {
+    --1: #FFFFFF;
+    --2: #dddddd;
+    --3: #bbbbbb;
+    --4: #888888;
+    --5: #000000;
 }
 
-h1 {
-    font-size: 72px;
-    background: -webkit-linear-gradient(#4edee8, #941c9f);
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+* {
+    box-sizing: border-box;
+}
+
+html {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Lexend", sans-serif;
+    margin: 0;
+    color: var(--5);
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 5em;
+    padding: 1em;
+    background-color: var(--3);
+}
+
+header nav {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0 1em;
+}
+
+header nav a {
+    text-decoration: none;
+}
+
+.home {
+    display: flex;
+    width: max-content;
+    padding: 0 0.5em;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0;
+    background-image: linear-gradient(135deg, #00eeff, #941c9f);
+    color: transparent;
+    background-clip: text;
+}
+
+main {
+    padding: 2em;
+    width: 100%;
+    height: calc(100% - 5em);
 }
 
 footer {
@@ -23,4 +77,97 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+.nav-items {
+    /* margin-left: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-items ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.nav-item {
+    position: relative;
+    display: flex;
+    height: 100%;
+    transition: font-size 0.2s ease-in-out;
+    text-decoration: none;
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+.dropdown-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 1em;
+}
+
+.dropdown.show {
+    font-size: 1.3rem;
+}
+
+.dropdown.show>.dropdown-menu {
+    opacity: 1;
+    display: block;
+    transform: translate(-50%, 0px);
+}
+
+.dropdown.show a {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 10px);
+    min-width: 12rem;
+    padding: 1rem;
+    opacity: 0;
+    z-index: 10;
+    transition: transform 0.2s ease, opacity 0.2s ease-in-out;
+    background-color: var(--2);
+    text-align: center;
+    border-radius: 1em;
+    font-size: 1rem;
+}
+
+.nav-item a {
+    text-decoration: none;
+    cursor: default;
+    color: var(--5);
+}
+
+.dropdown-menu ul {
+    padding: 0;
+    flex-direction: column;
+}
+
+.dropdown-menu li {
+    display: block;
+    margin: 0.1rem;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.1rem;
+    width: 100%;
+}
+
+.dropdown-menu li:hover {
+    background-color: var(--1);
+    border-radius: 0.5rem;
 }

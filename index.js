@@ -35,22 +35,24 @@ if (useHttps) {
     });
 } else {
     http.createServer(app).listen(port, () => {
-        console.log(`HTTP Server running on port ${port} view on http://localhost:3000/?fake=true`);
+        console.log(`HTTP Server running on port ${port} view on http://localhost:3000/`);
     });
 }
 
 app.use(express.json());
 
-app.use(express.urlencoded({
-    extended: true
-}));
+app.use(express.urlencoded({extended: true}));
 
 app.use(express.static('public'));
 app.engine("handlebars", exphbs.engine({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 app.get('/', (req, res) => {
-    res.render('home', {});
+    res.render('home', {styles: ["/home.css"]});
+});
+
+app.get('/projects', (req, res) => {
+    res.render('projects', {styles: []});
 });
 
 app.get("*", function (req, res) {

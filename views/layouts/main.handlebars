@@ -7,9 +7,12 @@
     <title>Bobthe28th</title>
     <link rel="icon" type="image/x-icon" href="/assets/icons/code.svg">
     <link rel="stylesheet" href="/style.css">
-    <script src="/index.js"></script>
+    <script defer src="/index.js"></script>
     {{#each scripts}}
         <script src="{{this}}"></script>
+    {{/each}}
+    {{#each styles}}
+        <link rel="stylesheet" href="{{this}}">
     {{/each}}
 </head>
 <body>

@@ -51,9 +51,9 @@ app.get('/', (req, res) => {
     res.render('home', {styles: ["/home.css"]});
 });
 
-app.get('/projects', (req, res) => {
-    res.render('projects', {styles: []});
-});
+// app.get('/projects', (req, res) => {
+//     res.render('projects', {styles: []});
+// });
 
 app.get("*", function (req, res) {
     res.redirect("/");

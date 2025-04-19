@@ -54,9 +54,10 @@ app.get('/dcs88', (req, res) => {
     res.render('dcs88', {styles: ["/dcs88.css"]});
 });
 
-// app.get('/projects', (req, res) => {
-//     res.render('projects', {styles: []});
-// });
+app.get('/dcs88/download', (req, res) => {
+    const file = `${__dirname}/DCS 88 Setup 0.1.0.exe`;
+    res.download(file);
+});
 
 app.get("*", function (req, res) {
     res.redirect("/");
